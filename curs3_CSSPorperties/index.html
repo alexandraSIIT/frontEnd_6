@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div id="app">
+		<form>
+			<label for="user_name">Username</label>
+			<input name="username" type="text" id="user_name">
+			<label for="pass">Password</label>
+			<input name="password" type="password" id="pass">
+			<button type="submit">Submit</button>
+		</form>
+		<ul>
+			<li>Red</li>
+			<li>Green</li>
+			<li>Blue</li>
+			<li>Grey</li>
+		</ul>
+		<div id="box-model">Some content</div>
+		<!-- Floats -->
+		<div style="background-color:green">
+			<div class="column">Div 1</div>
+			<div class="column">Div 2</div>
+			<div class="column">Div 3</div>
+			<div>Div 4</div>
+		</div>
+		<!-- Positioning -->
+		<div class="green">Static element</div>
+		<div class="pink">Position Relative</div>
+		<!-- Defining a parent with position declared to something else than static-->
+		<div style="position:relative;height:100px;width:100px;background-color:yellow">
+			<div class="red">Position Absolute</div>
+		</div>
+		<div class="orange">Position Fixed</div>
+	</div>
+</body>
+
+</html>

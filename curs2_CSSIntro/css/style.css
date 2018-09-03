@@ -1,0 +1,55 @@
+/** Define element CSS rule **/
+/* p {
+  color: yellow;
+  font-weight: bold;
+} */
+
+/** Define class style rule **/
+.nice_paragraph {
+  background-color: lightcoral;
+}
+
+/** Define id CSS rule **/
+#car_2 {
+  text-decoration: underline;
+}
+
+/** Workshop 1 **/
+#container {
+  background-color: grey;
+}
+
+.red,
+span {
+  color: red;
+}
+
+a {
+  color: blue;
+}
+
+/**Descendent selector **/
+div a {
+  background-color: lightblue;
+}
+
+/** Direct child selector **/
+div > a {
+  font-weight: bold;
+}
+
+p > a {
+  color: blue;
+}
+
+div > a {
+  color: green;
+}
+
+body > p > span {
+  color: pink;
+}
+
+/* #app + p > span {
+  color: pink;
+} */

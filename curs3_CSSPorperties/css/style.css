@@ -1,0 +1,68 @@
+form {
+  background-color: lightblue;
+}
+[name="username"] {
+  line-height: 20px;
+}
+
+li:last-child {
+  background-color: lightcoral;
+}
+
+li::after {
+  content: ";";
+}
+
+label,
+input,
+div li {
+  font-size: 22px;
+}
+
+/** Box model **/
+#box-model {
+  padding: 10px 8px 7px 5px;
+  margin: 20px 10px;
+  border: 1px solid black;
+}
+
+.column {
+  float: left;
+}
+/** Positioning **/
+.green {
+  background-color: lightgreen;
+  height: 100px;
+  width: 100px;
+}
+/**
+  top,left, right, bottom CSS options are not available for static(default) positioned elements
+**/
+.pink {
+  background-color: lightpink;
+  height: 100px;
+  width: 100px;
+  /*position related settings*/
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.red {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  /*position related settings*/
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.orange {
+  background-color: orange;
+  height: 100px;
+  width: 100px;
+  /*position related settings*/
+  position: fixed;
+  bottom: 0;
+}

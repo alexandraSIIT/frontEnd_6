@@ -1,0 +1,37 @@
+.container {
+  min-width: 100px;
+  min-height: 100px;
+  display: inline-block;
+}
+
+.red {
+  background-color: lightcoral;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.green {
+  background-color: lightgreen;
+  position: relative;
+  z-index: -2;
+}
+
+div.box1 {
+  display: none;
+}
+
+.box2 {
+  visibility: hidden;
+}
+
+.dialog {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: lightsalmon;
+  z-index: -1;
+}
