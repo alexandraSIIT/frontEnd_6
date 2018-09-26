@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	<title>JQuery DOM Manipulation</title>
+	<meta charset="UTF-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<h1>Comments List</h1>
+	<div id="app">
+		<input type="text" placeholder="Search by title" name="search">
+		<button id="search-btn">Search</button>
+
+		<div id="comments-list">
+			<section class="comment-item">
+				<h3>Comment 1</h3>
+				<p>Content for comment 1 <strong>Ion POP</strong></p>
+			</section>
+			<section class="comment-item">
+				<h3>Comment 2</h3>
+				<p>Content for comment 2 <strong>Ion POP</strong></p>
+			</section>
+		</div>
+	</div>
+
+	<form>
+		<input type="text" name="title" placeholder="Title">
+		<textarea name="body" placeholder="Body"></textarea>
+		<input type="text" name="author" placeholder="Author">
+		<button id="save-btn">Save</button>
+	</form>
+
+	<script src="src/index.js"></script>
+</body>
+
+</html>
