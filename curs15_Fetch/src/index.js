@@ -88,8 +88,11 @@ function updateArticleOnClick(event) {
       console.log("edited", response);
 
       // populate items with the response from the API
-      grandpa.querySelector(".article-title").innerText = response.title;
-      grandpa.querySelector(".article-body").innerText = response.body;
+
+      // because PUT does not work as expected (it only returns the article ID, not the entire object)
+      // we set the DOM elements with the input title and body that we sent
+      grandpa.querySelector(".article-title").innerText = inputTitle.value;
+      grandpa.querySelector(".article-body").innerText = inputBody.value;
 
       // remove input and textarea created by us
       inputTitle.remove();
@@ -114,14 +117,9 @@ function deleteArticleOnClick(clickedButton) {
   // deleteArticle(articleId, removeArticleFromDOM, grandpa);
 
   // the new way, with promises
-  deleteArticle(articleId).then(
-    function(response) {
-      removeArticleFromDOM(response, grandpa);
-    },
-    function(error) {
-      console.log("ERROR 2!!!", error);
-    }
-  );
+  deleteArticle(articleId).then(function(response) {
+    removeArticleFromDOM(response, grandpa);
+  });
 }
 
 function removeArticleFromDOM(response, grandpa) {

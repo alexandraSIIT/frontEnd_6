@@ -9,7 +9,7 @@ function deleteArticle(articleId) {
   // DO NOT FORGET TO RETURN THE PROMISE!!!
   // AJAX calls always create (automatically) a promise
   return $.ajax({
-    url: rootUrl + "posts/" + articleId,
+    url: rootUrl + "posts" + articleId,
     method: "DELETE"
   });
 }
