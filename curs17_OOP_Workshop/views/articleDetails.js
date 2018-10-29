@@ -19,3 +19,11 @@ function getUrlParameter(name) {
     ? ""
     : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
+getArticleComments();
+function getArticleComments() {
+  var comments = new Comments();
+  comments.getAll(article.id).then(function() {
+    console.log("Comments list", comments.items);
+  });
+}

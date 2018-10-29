@@ -17,3 +17,31 @@ Article.prototype.getArticleDetails = function() {
     me.body = response.body;
   });
 };
+
+Article.prototype.saveArticle = function() {
+  return $.post({
+    url: articlesRootUrl,
+    data: {
+      title: this.title,
+      body: this.body
+    }
+  });
+};
+
+Article.prototype.updateArticle = function() {
+  return $.ajax({
+    url: articlesRootUrl + this.id,
+    method: "PUT",
+    data: {
+      title: this.title,
+      body: this.body
+    }
+  });
+};
+
+Article.prototype.deleteArticle = function() {
+  return $.ajax({
+    url: articlesRootUrl + this.id,
+    method: "DELETE"
+  });
+};

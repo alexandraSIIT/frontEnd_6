@@ -9,9 +9,28 @@
 </head>
 
 <body>
-	<div id="app">
-		
+
+	<h2>Articles list</h2>
+	<div id="articles"></div>
+	<div id="template">
+		<h3 class="article-header">
+			<span class="article-id"></span>: <span class="article-title" />
+		</h3>
+		<p class="article-body" />
+		<p class="article-author" />
+
+		<div>
+			<button class="article-delete">Delete</button>
+			<button class="article-edit">Edit</button>
+		</div>
 	</div>
+
+<h2>Add article</h2>
+<form method="POST">
+	<input type="text" name="title" placeholder="Article Title"/>
+	<textarea name="body" placeholder="Article body"></textarea>
+	<button id="btn-save">Save</button>
+</form>	
 
   <script src="../models/Article.js"></script>
 	<script src="../models/Articles.js"></script>
