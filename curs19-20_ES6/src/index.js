@@ -66,10 +66,11 @@ function varTest() {
   //console.log("Y=", y);
   var x = 2;
   if (true) {
-    var x = 3;
+    var x = 3; // same x
   }
   console.log("X=", x);
 }
+// => declaration on the top of the funtion
 // function varTest() {
 //   var x;
 //   console.log("X=", x);
@@ -83,7 +84,7 @@ hoistedFunction();
 function hoistedFunction() {
   console.log("Hoisted function");
 }
-
+// => declaration on the top
 // function hoistedFunction() {
 //   console.log("Hoisted function");
 // }
@@ -100,12 +101,13 @@ function letTest() {
   let x = 2;
   if (true) {
     let x = 3;
-    console.log("X=", x); //3
+    console.log("X=", x); //3 - diffrent var
   }
   console.log("X=", x); //2
 }
 letTest();
 
+// Display 0, 1, 2, 3 using timeout...
 function displayIndexs() {
   for (var i = 0; i < 10; i++) {
     setTimeout(function() {
@@ -126,7 +128,7 @@ displayIndexsES6();
 
 // CONST
 const PI = 3.14;
-//const PI = 3.141;  error dupllicate decaration
+//const PI = 3.141;  error duplicate declaration
 
 const OBJ = {
   name: "Anca",
@@ -141,34 +143,13 @@ const es6ExpFunction = function() {
 };
 es6ExpFunction();
 
-function initButtonsES6() {
-  var body = document.body,
-    button;
-
-  for (let i = 0; i < 5; i++) {
-    // new i var for each iteration
-    button = document.createElement("button");
-    button.innerHTML = "Button " + i;
-
-    button.addEventListener(
-      "click",
-      function(e) {
-        alert(i);
-      },
-      false
-    );
-    body.appendChild(button);
-  }
-}
-initButtonsES6();
-
+// Display button index on click without using data from html, event...
 function initButtonsES5() {
-  var body = document.body,
-    button;
+  var body = document.body;
 
   for (var i = 0; i < 5; i++) {
     // new i var for each iteration
-    button = document.createElement("button");
+    var button = document.createElement("button");
     button.innerHTML = "Button " + i;
     addEvent(i);
     function addEvent(i) {
@@ -185,6 +166,24 @@ function initButtonsES5() {
   }
 }
 initButtonsES5();
+
+function initButtonsES6() {
+  var body = document.body;
+  for (let i = 0; i < 5; i++) {
+    // new i var for each iteration
+    var button = document.createElement("button");
+    button.innerHTML = "Button " + i;
+    button.addEventListener(
+      "click",
+      function(e) {
+        alert(i);
+      },
+      false
+    );
+    body.appendChild(button);
+  }
+}
+initButtonsES6();
 
 // Arrow function
 //ES5
@@ -211,10 +210,10 @@ const displayName2 = name => name;
 console.log("Name=", displayName("anca"));
 
 // Arrow functions
+// ES5
 var es5Function = function() {
   console.log("My function");
 };
-
 var es5Function2 = function(a, b) {
   return a + b;
 };
@@ -253,6 +252,7 @@ const es68 = () => ({
 });
 console.log(es68());
 
+// THIS SCOPE
 //ES5 this scope
 var body = document.body;
 var button = document.createElement("button");
