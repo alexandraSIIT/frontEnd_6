@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>Frame inside another doc</title>
+  </head>
+
+  <body>
+    <div id="title"></div>
+    <script type="text/javascript">
+      document.getElementById("title").innerHTML = parent.document.title;
+    </script>
+  </body>
+</html>
