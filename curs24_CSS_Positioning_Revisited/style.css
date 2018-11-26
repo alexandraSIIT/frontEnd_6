@@ -1,0 +1,34 @@
+h2 {
+  margin-top: 50px;
+}
+
+.container {
+  border: 1px solid #f00;
+}
+
+.child {
+  border: 1px dashed #00f;
+  margin: 0;
+}
+
+.relative {
+  position: relative;
+  top: 30px;
+  left: 20px;
+}
+
+.absolute {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+.relativeContainer {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
